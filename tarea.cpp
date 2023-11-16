@@ -13,6 +13,7 @@ int opc2;
 int main()
 {
     do{
+    system("cls");
     opc = menu();
     switch(opc){
         case 1:
@@ -33,7 +34,6 @@ int main()
 
     }
     cout<<endl;
-    system("pause");
     }while(opc!=0);
     return 0;
 }
@@ -50,9 +50,9 @@ do {
     cout<<" [3] "<<endl;
     if(monto!=0){cout<<" [4] Pagar"<<endl;}
     cout<<" [0] "<<endl;
-    
+
     if(monto!=0) cout<<"Subtotal: "<<monto<<endl;
-    cout<<"Ingrese la opción: "; 
+    cout<<"Ingrese la opción: ";
     cin>>opcion;
     } while (opcion<0 or opcion>4);
 return opcion;
@@ -73,13 +73,14 @@ int Servicios(){
 }
 int Pagar(){
     do{
+    system("cls");
     cout<<"Subtotal:"<< monto<<endl;
     cout<<"Comision: 5 soles"<<endl;
     cout<<"El total a pagar es "<<monto+5<<endl;
     cout<<"[1] Aceptar"<<endl;
     cout<<"[0] Regresar"<<endl;
     cin>>opc2;
-    
+
     switch(opc2){
         case 1:
             cout<<"Gracias por usar el programa";
@@ -89,6 +90,7 @@ int Pagar(){
             break;
         default:
             cout<<"Porfavor eliga una opcion valida"<<endl;
+            system("pause");
             break;
     }
     }while(!(opc2==1 or opc2==0));
@@ -96,12 +98,12 @@ int Pagar(){
 }
 
 /*
-int validar_digito (string cadena) 
+int validar_digito (string cadena)
 {int cantidad_digitos=0;
 for (int i=0;i<cadena.length();i++)
-    {if (int (cadena [i])>47 and cadena [i]<58) 
+    {if (int (cadena [i])>47 and cadena [i]<58)
         { cantidad_digitos++;
-            
+
         }
     }
     return cantidad_digitos;
